@@ -36,7 +36,7 @@
 
 		<div id="toggle-menu"> <div id='toggle-menu-inner'> <img src="img/close.png"> </div> </div>
 
-		<div id="hero">
+		<div id="background">
 			<div class="overlay"></div>
 
 			<h1><img id="hero-logo" src="img/logo.jpg" />Dhwani</h1>
@@ -51,6 +51,7 @@
 			<footer id="hero-foot">
 				&copy; Dhwani Inc. | 2018
 			</footer>
+
 		</div>
 
 		<div class="card" id='left-card'>
@@ -177,3 +178,18 @@
 
 	</body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+var movementStrength = 25;
+var height = movementStrength / $(window).height();
+var width = movementStrength / $(window).width();
+$("#background").mousemove(function(e){
+          var pageX = e.pageX - ($(window).width() / 2);
+          var pageY = e.pageY - ($(window).height() / 2);
+          var newvalueX = width * pageX * -1 - 25;
+          var newvalueY = height * pageY * -1 - 50;
+          $('#background').css("background-position", newvalueX+"px     "+newvalueY+"px");
+});
+});
+</script>

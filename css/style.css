@@ -468,3 +468,12 @@ h1{
 	color: #39c;
 	text-decoration: none;
 }
+#background {
+background:url('../img/wallpaper.jpg') -25px -50px;
+position:fixed ;
+top:0;
+width:100%;
+z-index:0;
+  height:100%;
+  background-size: calc(100% + 50px);
+}
